@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>College Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login / Register -->
+  <main id="auth" class="auth hidden">
+    <div class="auth-box">
+      <h1>Student Portal</h1>
+      <div class="tabs">
+        <button id="tab-login" class="active" type="button">Log in</button>
+        <button id="tab-register" type="button">Register</button>
+      </div>
+      <form id="login-form">
+        <label>Email <input type="email" id="l-email" required></label>
+        <label>Password <input type="password" id="l-pass" required></label>
+        <button class="primary">Log in</button>
+      </form>
+      <form id="register-form" class="hidden">
+        <label>Full name <input id="r-name" required></label>
+        <label>Email <input type="email" id="r-email" required></label>
+        <label>Course
+          <select id="r-course">
+            <option>B.Tech Computer Science</option>
+            <option>B.Tech Electronics</option>
+            <option>B.Sc Mathematics</option>
+            <option>BBA</option>
+          </select>
+        </label>
+        <label>Password (min 6 characters) <input type="password" id="r-pass" minlength="6" required></label>
+        <button class="primary">Create account</button>
+      </form>
+      <p id="auth-msg" class="msg" role="alert"></p>
+    </div>
+  </main>
+
+  <!-- App -->
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <h2>Student Portal</h2>
+      <nav id="nav"></nav>
+      <button id="logout" class="link">Log out</button>
+    </aside>
+    <main id="view" class="view"></main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
